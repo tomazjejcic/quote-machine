@@ -1,0 +1,57 @@
+<!-- https://davidwalsh.name/css-flip -->
+<!-- https://quotesondesign.com/api-v4-0/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Quote Machine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+
+</head>
+
+<body>
+
+    <!-- ontouchestart supposedley allows the panes to swap on tuchscreen -->
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+
+        <div class="flipper">
+            <!-- front content -->
+            <div class="front">
+                <button class="inner-btn">
+                    FLIP 
+                </button>
+                <p id="front-title"></p>
+                <p id="front-content"></p>
+            </div>
+
+            <!-- back content -->
+            <div class="back">
+                <button class="inner-btn">
+                    FLOP 
+                </button>
+                <p id="back-title"></p>
+                <p id="back-content"></p>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <button class="out-btn">
+            OUT BUTTON
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./src/index.js"></script>
+
+</body>
+
+</html>
