@@ -1,17 +1,22 @@
 $(document).ready(function() {
     
-    var side = "front";
-    callQuote();
+    // var side = "front";
+    // callQuote();
     
-    $(".inner-btn").click(function() {
-        document.querySelector(".flip-container").classList.toggle("flip");
-        e.preventDefault();
-        callQuote();
-    })
+    // $(".inner-btn").click(function() {
+    //     document.querySelector(".flip-container").classList.toggle("flip");
+    //     e.preventDefault();
+    //     callQuote();
+    // })
     
-    $(".out-btn").click(function(e) {    
-        e.preventDefault();
-        callQuote();
+    // $(".out-btn").click(function(e) {    
+    //     e.preventDefault();
+    //     callQuote();
+    // })
+
+    $("#flip-button").click(function() {
+        $('.card').toggleClass('flipped');
+        window.console&&console.log('PRSSSED');
     })
       
     function callQuote() {

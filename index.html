@@ -18,36 +18,14 @@
 
 <body>
 
-    <!-- ontouchestart supposedley allows the panes to swap on tuchscreen -->
-    <!-- <div class="flip-container" ontouchstart="this.classList.toggle('hover');"> -->
-    <div class="flip-container">
+    <button id="flip-button">flip the card</button>
 
-        <div class="flipper">
-            <!-- front content -->
-            <div class="front">
-                <button class="inner-btn">
-                    FLIP 
-                </button>
-                <!-- <p id="front-title"></p>
-                <p id="front-content"></p> -->
-            </div>
-
-            <!-- back content -->
-            <div class="back">
-                <button class="inner-btn">
-                    FLOP 
-                </button>
-                <!-- <p id="back-title"></p>
-                <p id="back-content"></p> -->
-            </div>
-        </div>
-
-    </div>
-    <div>
-        <button class="out-btn">
-            OUT BUTTON
-        </button>
-    </div>
+    <section class="container">
+      <div class="card" onclick="flip()">
+        <div class="front">1</div>
+        <div class="back">2</div>
+      </div>
+    </section>
 
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
