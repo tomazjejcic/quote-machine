@@ -40,5 +40,5 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
-    background: blue;
+    background: green;
 }

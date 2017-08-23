@@ -5,6 +5,7 @@ $(document).ready(function() {
     
     $(".inner-btn").click(function() {
         document.querySelector(".flip-container").classList.toggle("flip");
+        e.preventDefault();
         callQuote();
     })
     
