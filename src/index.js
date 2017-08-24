@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
-    // var side = "front";
-    // callQuote();
+    var side = "front";
+    callQuote();
     
     // $(".inner-btn").click(function() {
     //     document.querySelector(".flip-container").classList.toggle("flip");
@@ -14,10 +14,23 @@ $(document).ready(function() {
     //     callQuote();
     // })
 
-    $("#flip-button").click(function() {
+    $(".flip-button").click(function() {
         $('.card').toggleClass('flipped');
         window.console&&console.log('PRSSSED');
+        callQuote();
     })
+
+    // $("#flip-one").click(function() {
+    //     $('.card').toggleClass('flipped');
+    //     window.console&&console.log('PRSSSED');
+    //     callQuote();
+    // })
+
+    // $("#flip-two").click(function() {
+    //     $('.card').toggleClass('flipped');
+    //     window.console&&console.log('PRSSSED');
+    //     callQuote();
+    // })
       
     function callQuote() {
   

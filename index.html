@@ -1,4 +1,3 @@
-<!-- https://davidwalsh.name/css-flip -->
 <!-- https://quotesondesign.com/api-v4-0/ -->
 
 <!DOCTYPE html>
@@ -18,12 +17,20 @@
 
 <body>
 
-    <button id="flip-button">flip the card</button>
+    <button class="flip-button">flip the card</button>
 
     <section class="container">
-      <div class="card" onclick="flip()">
-        <div class="front">1</div>
-        <div class="back">2</div>
+      <div class="card">
+        <div class="front">
+            <button class="flip-button">flip</button>
+            <p id="front-title"></p>
+            <p id="front-content"></p>
+        </div>
+        <div class="back">
+            <button class="flip-button">flop</button>
+            <p id="back-title"></p>
+            <p id="back-content"></p>
+        </div>
       </div>
     </section>
 
