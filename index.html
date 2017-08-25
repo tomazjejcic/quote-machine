@@ -12,27 +12,47 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <link rel="stylesheet" type="text/css" href="./style/font-awesome.min.css">
 
 </head>
 
 <body>
 
-    <button class="flip-button">flip the card</button>
-
-    <section class="container">
-      <div class="card">
-        <div class="front">
-            <button class="flip-button">flip</button>
-            <p id="front-title"></p>
-            <p id="front-content"></p>
+    <!-- <button class="flip-button">flip the card</button> -->
+    <main id="content">
+        <section class="container">
+        <div class="card">
+            <div class="front">
+                <div class="front-content">
+                    <p id="front-content"></p>
+                    <p id="front-title"></p>
+                </div>
+                <div class="front-footer">
+                    <button class="flip-button">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </button>
+                    <button class="flip-button">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="back">
+                <div class="back-content">
+                    <p id="back-title"></p>
+                    <p id="back-content"></p>
+                </div>
+                <div class="back-footer">
+                    <button class="flip-button">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </button>
+                    <button class="flip-button">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="back">
-            <button class="flip-button">flop</button>
-            <p id="back-title"></p>
-            <p id="back-content"></p>
-        </div>
-      </div>
-    </section>
+        </section>
+    </main>
 
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

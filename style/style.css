@@ -1,8 +1,29 @@
+.dark-primary-color    { background: #00796B; }
+.default-primary-color { background: #009688; }
+.light-primary-color   { background: #B2DFDB; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #E040FB; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+body {
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	background:  #009688;
+	display: flex;
+	margin: 0px;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/*	CARD  */
 .container {
-    width: 200px;
-    height: 260px;
+    width: 240px;
+    height: 450px;
     position: relative;
-    border: 1px solid #ccc;
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
@@ -20,14 +41,14 @@
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
 }
 .card div {
     display: block;
     height: 100%;
     width: 100%;
     line-height: 20px;
-    color: white;
+    color: #212121;
     text-align: center;
     font-weight: bold;
     font-size: 10px;
@@ -38,20 +59,61 @@
     backface-visibility: hidden;
 }
 .card .front {
-  background: red;
+  background: #B2DFDB;
+  position: relative;
 }
 .card .back {
-    background: blue;
+	background: #BDBDBD;
+	position: relative;
+	bottom: 450px;
     -webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
+
+.card .front .front-content {
+	background: red;
+	color: white;
+	height: 390px;
+}
+
+.card .front .front-footer {
+	background: blue;
+	color: white;
+	height: 60px;
+	font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+	display: flex;
+    justify-content: space-around;
+}
+
+.card .front .front-footer .flip-button {
+	font-size: 30px;
+}
+
+.card .back .back-content {
+	background: red;
+	color: white;
+	height: 420px;
+	/* flex: 1; */
+}
+.card .back .back-footer {
+	background: blue;
+	color: white;
+	height: 30px;
+    position: absolute;
+    bottom: 0px;
+	display: flex;
+    justify-content: space-around;
+}
+
 .card.flipped {
     -webkit-transform: rotateY( 2700deg );
     -moz-transform: rotateY( 2700deg );
     -o-transform: rotateY( 2700deg );
     transform: rotateY( 2700deg );
 }
-
+/*	/CARD  */
 
