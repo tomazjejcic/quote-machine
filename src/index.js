@@ -6,13 +6,11 @@ $(document).ready(function() {
     callQuote();
 
     $(".tweet-button").click(function() {
-        window.console&&console.log('TWEET PRSSSED');
         openWindow('https://twitter.com/intent/tweet?&text=' + '"' + quote + '" ' + author);
     })
 
     $(".flip-button").click(function() {
         $('.card').toggleClass('flipped');
-        window.console&&console.log('PRSSSED');
         callQuote();
     })
 
@@ -35,17 +33,20 @@ $(document).ready(function() {
             url: href,
             success: function(data) {
                 var post = data.shift(); // The data is an array of posts. Grab the first one.
-                window.console&&console.log('FOO POST: ', post);
+
+                // call new quote if the string is too long to fit the window
+                // would consider twitter lengt limitation of 140?
+                if (post.content.length > 360) {
+                    callQuote()
+                    return
+                }
                 
                 if (side === "front") {
-                    window.console&&console.log("THIS IS FRONT");
                     $('#front-title').text(post.title);
                     $('#front-content').html(post.content);
                     side = "back";
                     quote = strip(post.content);
                     author = strip(post.title);
-                    window.console&&console.log(author);
-                    window.console&&console.log(quote);
                 } else {
                     $('#back-title').text(post.title);
                     $('#back-content').html(post.content);

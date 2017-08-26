@@ -137,3 +137,35 @@ button {
 	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 	/* font-family: Arial, Helvetica, sans-serif; */
 }
+
+@media(min-width:768px) {
+
+    button {
+        margin: 0px 20px 0px 0px;
+    }
+
+    .container {
+        width: 600px;
+        height: 450px;
+    }
+
+    .card div {
+        line-height: 25px;
+    }
+
+    .card .front .front-footer {
+        justify-content: flex-end;
+    }
+
+    .card .back .back-footer {
+        justify-content: flex-end;
+    }
+
+    .quote-text {
+        margin: 20px 70px 0px 70px;
+    }
+
+    .quote-author {
+        margin: 15px 90px 20px 90px;
+    }
+}
