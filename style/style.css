@@ -1,25 +1,21 @@
-.dark-primary-color    { background: #00796B; }
-.default-primary-color { background: #009688; }
-.light-primary-color   { background: #B2DFDB; }
-.text-primary-color    { color: #FFFFFF; }
-.accent-color          { background: #E040FB; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
-.divider-color         { border-color: #BDBDBD; }
 
 body {
-	position: absolute;
+	background:  #CCC64D;
 	min-height: 100%;
 	min-width: 100%;
-	background:  #009688;
+	position: absolute;
 	display: flex;
 	margin: 0px;
 	justify-content: center;
 	align-items: center;
-
 }
 
-/*	CARD  */
+button {
+	background: transparent;
+	border: 0px;
+	outline: none;
+}
+
 .container {
     width: 240px;
     height: 450px;
@@ -29,6 +25,7 @@ body {
     -o-perspective: 800px;
     perspective: 800px;
 }
+
 .card {
     width: 100%;
     height: 100%;
@@ -43,12 +40,12 @@ body {
     transform-style: preserve-3d;
 	-webkit-transform-origin: 50% 50%;
 }
+
 .card div {
-    display: block;
-    height: 100%;
+	height: 100%;
     width: 100%;
+    display: block;
     line-height: 20px;
-    color: #212121;
     text-align: center;
     font-weight: bold;
     font-size: 10px;
@@ -58,12 +55,21 @@ body {
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
+.card.flipped {
+    -webkit-transform: rotateY( 2700deg );
+    -moz-transform: rotateY( 2700deg );
+    -o-transform: rotateY( 2700deg );
+    transform: rotateY( 2700deg );
+}
+
 .card .front {
-  background: #B2DFDB;
+  background: #55532A;
   position: relative;
 }
+
 .card .back {
-	background: #BDBDBD;
+	background: #FFFCB8;
 	position: relative;
 	bottom: 450px;
     -webkit-transform: rotateY( 180deg );
@@ -72,17 +78,34 @@ body {
     transform: rotateY( 180deg );
 }
 
-.card .front .front-content {
-	background: red;
-	color: white;
+.card .front .front-container {
+	color: #FFFCB8;
 	height: 390px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .back .back-container {
+	color: #55532A;
+	height: 390px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card .front .front-footer {
-	background: blue;
 	color: white;
 	height: 60px;
+    position: absolute;
+    bottom: 0px;
+	display: flex;
+    justify-content: space-around;
 	font-size: 30px;
+}
+
+.card .back .back-footer {
+	height: 60px;
     position: absolute;
     bottom: 0px;
 	display: flex;
@@ -90,30 +113,28 @@ body {
 }
 
 .card .front .front-footer .flip-button {
+	color: #FFFCB8;
 	font-size: 30px;
 }
 
-.card .back .back-content {
-	background: red;
-	color: white;
-	height: 420px;
-	/* flex: 1; */
-}
-.card .back .back-footer {
-	background: blue;
-	color: white;
-	height: 30px;
-    position: absolute;
-    bottom: 0px;
-	display: flex;
-    justify-content: space-around;
+.card .back .back-footer .flip-button {
+	color: #55532A;
+	font-size: 30px;
 }
 
-.card.flipped {
-    -webkit-transform: rotateY( 2700deg );
-    -moz-transform: rotateY( 2700deg );
-    -o-transform: rotateY( 2700deg );
-    transform: rotateY( 2700deg );
+.quote-text {
+	margin: 20px 20px 0px 20px;
+	font-size: 16px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	/* font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif */
 }
-/*	/CARD  */
 
+.quote-author {
+	color: #B5B49C;
+	margin: 0px 20px 20px 20px;
+	text-align: end;
+	font-size: 14px;
+	font-family: monospace;
+	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	/* font-family: Arial, Helvetica, sans-serif; */
+}
