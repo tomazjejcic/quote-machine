@@ -14,6 +14,7 @@ button {
 	background: transparent;
 	border: 0px;
 	outline: none;
+	font-size: 30px;
 }
 
 .container {
@@ -112,14 +113,12 @@ button {
     justify-content: space-around;
 }
 
-.card .front .front-footer .flip-button {
+.card .front .front-footer button {
 	color: #FFFCB8;
-	font-size: 30px;
 }
 
-.card .back .back-footer .flip-button {
+.card .back .back-footer button {
 	color: #55532A;
-	font-size: 30px;
 }
 
 .quote-text {

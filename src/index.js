@@ -1,18 +1,14 @@
 $(document).ready(function() {
     
     var side = "front";
+    var quote;
+    var author;
     callQuote();
-    
-    // $(".inner-btn").click(function() {
-    //     document.querySelector(".flip-container").classList.toggle("flip");
-    //     e.preventDefault();
-    //     callQuote();
-    // })
-    
-    // $(".out-btn").click(function(e) {    
-    //     e.preventDefault();
-    //     callQuote();
-    // })
+
+    $(".tweet-button").click(function() {
+        window.console&&console.log('TWEET PRSSSED');
+        openWindow('https://twitter.com/intent/tweet?&text=' + '"' + quote + '" ' + author);
+    })
 
     $(".flip-button").click(function() {
         $('.card').toggleClass('flipped');
@@ -20,17 +16,16 @@ $(document).ready(function() {
         callQuote();
     })
 
-    // $("#flip-one").click(function() {
-    //     $('.card').toggleClass('flipped');
-    //     window.console&&console.log('PRSSSED');
-    //     callQuote();
-    // })
+    function strip(html) {
+       var tmp = document.createElement("DIV");
+       tmp.innerHTML = html;
+       totrim = tmp.textContent || tmp.innerText || "";
+       return $.trim(totrim);
+    }
 
-    // $("#flip-two").click(function() {
-    //     $('.card').toggleClass('flipped');
-    //     window.console&&console.log('PRSSSED');
-    //     callQuote();
-    // })
+    function openWindow(url) {
+        window.open(url);
+    }
       
     function callQuote() {
   
@@ -47,10 +42,16 @@ $(document).ready(function() {
                     $('#front-title').text(post.title);
                     $('#front-content').html(post.content);
                     side = "back";
+                    quote = strip(post.content);
+                    author = strip(post.title);
+                    window.console&&console.log(author);
+                    window.console&&console.log(quote);
                 } else {
                     $('#back-title').text(post.title);
                     $('#back-content').html(post.content);
                     side = "front";
+                    quote = strip(post.content);
+                    author = strip(post.title);
                 }
         
                 // If the Source is available, use it. Otherwise hide it.
